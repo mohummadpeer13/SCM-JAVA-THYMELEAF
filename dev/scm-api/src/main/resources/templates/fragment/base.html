@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html
+  lang="fr"
+  xmlns:th="http://www.thymeleaf.org"
+  th:fragment="parent(content, title)"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title th:text="${title}">Base Page</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  </head>
+
+  <body class="min-h-screen bg-white text-gray-800 flex flex-col">
+    <!-- NAVBAR -->
+    <header>
+      <div th:replace="~{fragment/navbar :: navbar}"></div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1">
+      <section th:replace="${content}"></section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 mt-16">
+      <div class="max-w-7xl mx-auto px-6 py-8 grid gap-10 md:grid-cols-3">
+        <!-- BRAND -->
+        <div>
+          <h3 class="text-xl font-bold text-white mb-3">
+            Gestionnaire de Contacts Intelligent
+          </h3>
+          <p class="text-sm leading-relaxed text-gray-400">
+            Développé par
+            <span class="font-semibold text-white">Peer Mohummad</span><br />
+            Full Stack Développeur Java / JEE et Javascript / Typescript,
+            passionné par le backend, le cloud et l’architecture logicielle
+            moderne.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="/" class="hover:text-white transition">Accueil</a>
+            </li>
+            <li>
+              <a href="/about" class="hover:text-white transition">À propos</a>
+            </li>
+            <li>
+              <a href="/user/dashboard" class="hover:text-white transition"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="/user/contacts/list" class="hover:text-white transition"
+                >Mes contacts</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Me contacter</h4>
+
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-blue-400"></i>
+              <a
+                href="mailto:peer.mohummad@gmail.com"
+                class="hover:text-white transition"
+              >
+                mohummad.peer@icloud.com
+              </a>
+            </li>
+
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-blue-400"></i>
+              <span>+33 7 83 97 49 82</span>
+            </li>
+
+            <li class="flex items-center gap-4 mt-4">
+              <a
+                th:href="@{https://github.com/mohummadpeer13}"
+                target="_blank"
+                class="text-xl hover:text-white transition"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+
+              <a
+                th:href="@{https://www.linkedin.com/in/mohummad-peer-18482919b}"
+                target="_blank"
+                class="text-xl hover:text-white transition"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Flowbite JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"
+      defer
+    ></script>
+  </body>
+</html>

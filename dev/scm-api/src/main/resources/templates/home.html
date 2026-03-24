@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html
+  lang="fr"
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{fragment/base :: parent(~{::section}, 'À propos')}"
+>
+  <body class="bg-gray-50">
+    <!-- But de l'application -->
+    <section class="py-8 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center">
+          <p class="text-2xl text-gray-600 max-w-5xl mx-auto font-bold">
+            Gestionnaire de Contact Intelligent est une application web complète
+            permettant de gérer efficacement une base de contacts avec des
+            fonctionnalités avancées. Elle offre un système d'authentification
+            sécurisé, la gestion des profils utilisateurs avec photos, et un
+            système de notifications asynchrone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalités principales -->
+    <section id="features" class="py-8 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        >
+          <i class="fas fa-star text-blue-600 mr-3"></i>Fonctionnalités
+          principales
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 tech-card">
+            <div class="feature-icon bg-blue-100 text-blue-600">
+              <i class="fas fa-users text-3xl p-2"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 p-2">
+              Gestion des contacts
+            </h3>
+            <p class="text-gray-600">
+              Création, modification, suppression et recherche avancée de
+              contacts avec catégorisation.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 tech-card">
+            <div class="feature-icon bg-green-100 text-green-600">
+              <i class="fas fa-shield-alt text-3xl p-2"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 p-2">
+              Authentification avancée
+            </h3>
+            <p class="text-gray-600">
+              Connexion classique et via Google OAuth2 avec gestion des rôles et
+              permissions.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 tech-card">
+            <div class="feature-icon bg-purple-100 text-purple-600">
+              <i class="fas fa-user-circle text-3xl p-2"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 p-2">
+              Gestion des profils
+            </h3>
+            <p class="text-gray-600">
+              Téléchargement et stockage cloud des photos de profil avec
+              interface intuitive.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white rounded-xl shadow-lg p-6 tech-card">
+            <div class="feature-icon bg-red-100 text-red-600">
+              <i class="fas fa-envelope text-3xl p-2"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 p-2">
+              Système de notifications
+            </h3>
+            <p class="text-gray-600">
+              Envoi d'emails asynchrones via architecture événementielle avec
+              Apache Kafka.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies utilisées -->
+    <section class="py-8 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        >
+          <i class="fas fa-code text-blue-600 mr-3"></i>Technologies utilisées
+        </h2>
+
+        <div class="space-y-10">
+          <!-- Backend -->
+          <div>
+            <h3 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+              <i class="fas fa-server mr-3"></i>Backend
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fab fa-java text-red-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Java 17</h4>
+                  <p class="text-gray-600 text-sm">Langage principal</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fas fa-leaf text-green-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Spring Boot</h4>
+                  <p class="text-gray-600 text-sm">Framework backend</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fas fa-database text-blue-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Spring Data JPA</h4>
+                  <p class="text-gray-600 text-sm">Persistance des données</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fas fa-shield-alt text-yellow-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Spring Security</h4>
+                  <p class="text-gray-600 text-sm">Authentification</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fab fa-google text-blue-400 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">OAuth2</h4>
+                  <p class="text-gray-600 text-sm">Connexion sociale</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i
+                  class="fas fa-broadcast-tower text-purple-500 text-2xl mr-4"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Apache Kafka</h4>
+                  <p class="text-gray-600 text-sm">Événements asynchrones</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Base de données -->
+          <div>
+            <h3 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+              <i class="fas fa-database mr-3"></i>Base de données
+            </h3>
+            <div class="flex items-center bg-gray-50 p-6 rounded-lg">
+              <i class="fab fa-mysql text-blue-600 text-3xl mr-6"></i>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">MySQL</h4>
+                <p class="text-gray-600">
+                  Système de gestion de base de données relationnelle pour
+                  stocker les informations de l'application.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div>
+            <h3 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+              <i class="fas fa-paint-brush mr-3"></i>Frontend
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fas fa-file-code text-blue-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Thymeleaf</h4>
+                  <p class="text-gray-600 text-sm">Templates HTML dynamiques</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fab fa-css3-alt text-teal-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Tailwind CSS</h4>
+                  <p class="text-gray-600 text-sm">Design responsive</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fas fa-cubes text-orange-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Flowbite</h4>
+                  <p class="text-gray-600 text-sm">
+                    Composants UI prêts à l'emploi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure & DevOps -->
+          <div>
+            <h3 class="text-2xl font-bold text-blue-700 mb-6 flex items-center">
+              <i class="fas fa-cloud mr-3"></i>Infrastructure & DevOps
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fab fa-docker text-blue-400 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Docker</h4>
+                  <p class="text-gray-600 text-sm">Conteneurisation</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fas fa-ship text-blue-600 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Kubernetes</h4>
+                  <p class="text-gray-600 text-sm">Orchestration</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fas fa-cube text-orange-500 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">Maven</h4>
+                  <p class="text-gray-600 text-sm">Gestion des dépendances</p>
+                </div>
+              </div>
+              <div class="flex items-center bg-gray-50 p-4 rounded-lg">
+                <i class="fas fa-server text-gray-700 text-2xl mr-4"></i>
+                <div>
+                  <h4 class="font-bold text-gray-800">KVM & Libvirt</h4>
+                  <p class="text-gray-600 text-sm">Virtualisation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="py-8 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        >
+          <i class="fas fa-project-diagram text-blue-600 mr-3"></i>Architecture
+        </h2>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <p class="text-gray-700 text-lg mb-6">
+            L'application suit une architecture microservices partielle avec une
+            communication asynchrone :
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-blue-50 p-6 rounded-lg text-center">
+              <div class="text-blue-600 text-3xl mb-4">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h4 class="font-bold text-gray-800 mb-2">Service principal</h4>
+              <p class="text-gray-600 text-sm">
+                Gestion des utilisateurs et contacts
+              </p>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg text-center">
+              <div class="text-green-600 text-3xl mb-4">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h4 class="font-bold text-gray-800 mb-2">
+                Service notifications
+              </h4>
+              <p class="text-gray-600 text-sm">Microservice dédié aux emails</p>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-lg text-center">
+              <div class="text-purple-600 text-3xl mb-4">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+              <h4 class="font-bold text-gray-800 mb-2">
+                Communication asynchrone
+              </h4>
+              <p class="text-gray-600 text-sm">
+                Apache Kafka pour découpler les services
+              </p>
+            </div>
+
+            <div class="bg-red-50 p-6 rounded-lg text-center">
+              <div class="text-red-600 text-3xl mb-4">
+                <i class="fas fa-code"></i>
+              </div>
+              <h4 class="font-bold text-gray-800 mb-2">API RESTful</h4>
+              <p class="text-gray-600 text-sm">
+                Interface cohérente client-serveur
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-10 p-6 bg-gray-800 text-white rounded-lg">
+            <h4 class="text-xl font-bold mb-4">
+              <i class="fas fa-server mr-2"></i>Hébergement
+            </h4>
+            <p class="mb-4">
+              Infrastructure privée basée sur serveur Alienware (Intel i7, 32 Go
+              RAM) avec Ubuntu 24 et hyperviseur KVM, simulant un environnement
+              de production professionnel.
+            </p>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-green-400 mr-2"></i>
+              <span>Environnement de production simulé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

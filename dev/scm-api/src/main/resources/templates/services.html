@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html
+  lang="fr"
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{fragment/base :: parent(~{::section}, 'Services')}"
+>
+  <body>
+    <section class="py-8 bg-gradient-to-b from-gray-200 to-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <!-- HEADER -->
+
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+          Gérez vos contacts intelligemment
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-lg text-gray-600 mb-16">
+          Une solution moderne pour organiser, sécuriser et retrouver facilement
+          toutes les personnes importantes de votre réseau.
+        </p>
+
+        <!-- CARDS -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- CARD 1 -->
+          <div
+            class="rounded-2xl bg-white p-8 shadow-md transition hover:-translate-y-3 hover:shadow-xl"
+          >
+            <div
+              class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-blue-600 text-3xl"
+            >
+              <i class="fas fa-address-book"></i>
+            </div>
+            <h3 class="mb-3 text-xl font-bold">Contacts intelligents</h3>
+            <p class="text-gray-600">
+              Centralisez toutes les informations importantes : photos, emails,
+              réseaux sociaux et notes personnelles.
+            </p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div
+            class="rounded-2xl bg-white p-8 shadow-md transition hover:-translate-y-3 hover:shadow-xl"
+          >
+            <div
+              class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600 text-3xl"
+            >
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="mb-3 text-xl font-bold">Sécurité avancée</h3>
+            <p class="text-gray-600">
+              Vos données sont chiffrées et protégées. Vous gardez le contrôle
+              total sur votre vie privée.
+            </p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="rounded-2xl bg-white p-8 shadow-md transition hover:-translate-y-3 hover:shadow-xl"
+          >
+            <div
+              class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-cyan-100 text-cyan-600 text-3xl"
+            >
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="mb-3 text-xl font-bold">Recherche instantanée</h3>
+            <p class="text-gray-600">
+              Retrouvez n’importe quel contact en quelques millisecondes, où que
+              vous soyez.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-20">
+          <p class="mb-4 text-gray-600">
+            Prêt à reprendre le contrôle de vos contacts ?
+          </p>
+          <a
+            data-th-href="@{'/user/contacts/'}"
+            class="inline-block rounded-full bg-blue-600 px-10 py-4 text-lg font-semibold text-white shadow hover:bg-blue-700 transition"
+          >
+            Commencer maintenant
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
